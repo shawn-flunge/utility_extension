@@ -13,7 +13,10 @@ and the Flutter guide for
 
 # Utility Extension
 
-Provides useful extensions for primitive data types.
+Provides useful extensions for primitive data types.\
+More information, check [Api reference](https://pub.dev/documentation/utility_extension/latest/) or [Github](https://github.com/shawn-flunge/utility_extension)
+
+
 
 ## Getting started
 
@@ -26,8 +29,17 @@ import 'package:utility_extension/utility_extension.dart
 ### List
 ```dart
 List<List<T>> devideInto(int each);
+Iterable<T> mapWithIndex(T Function(int index, T e) toElement);
 ```
 
+### String
+```dart
+String get snakeCase
+String get constantCase
+String get camelCase
+Iterable<Type> map<Type>(Type Function(String e) toElement)
+Iterable<Type> mapWithIndex<Type>(Type Function(int index, String e)
+```
 
 
 ## Usage
@@ -37,10 +49,10 @@ to `/example` folder.
 
 ```dart
 List<int> list = [1,2,3,4,5];
-List<List<int>> result = list.devideInto(2);
-print(result);  // output : [[1,2],[3,4],[5]]
-print(result.length)    // output : 3
-print(result[0])    // output : [1,2]
+print(list.devideInto(2))   // output : [[1,2],[3,4],[5]]
+
+String str = 'utility extension';
+print(str.camelCase);    // output : utilityExtension
 ```
 
 ## Additional information
