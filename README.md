@@ -34,9 +34,9 @@ Iterable<T> mapWithIndex(T Function(int index, T e) toElement);
 
 ### String
 ```dart
-String get snakeCase
-String get constantCase
-String get camelCase
+String  toSnakeCase()
+String toConstantCase()
+String toCamelCase()
 Iterable<Type> map<Type>(Type Function(String e) toElement)
 Iterable<Type> mapWithIndex<Type>(Type Function(int index, String e)
 ```
@@ -51,8 +51,11 @@ to `/example` folder.
 List<int> list = [1,2,3,4,5];
 print(list.devideInto(2))   // output : [[1,2],[3,4],[5]]
 
-String str = 'utility extension';
-print(str.camelCase);    // output : utilityExtension
+String str = 'Utility Extension is good';
+
+print(str.toCamelCase()); // utilityExtensionIsGood
+print(str.toConstantCase()); // UTILITY_EXTENSION_IS_GOOD
+print(str.toSnakeCase()); // utility_extension_is_good
 ```
 
 ## Additional information
