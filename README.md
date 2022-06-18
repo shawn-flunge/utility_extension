@@ -35,7 +35,7 @@ Iterable<T> mapWithIndex(T Function(int index, T e) toElement);
 
 ### String
 ```dart
-String  toSnakeCase()
+String toSnakeCase()
 String toConstantCase()
 String toCamelCase()
 Iterable<Type> map<Type>(Type Function(String e) toElement)
@@ -44,9 +44,6 @@ Iterable<Type> mapWithIndex<Type>(Type Function(int index, String e)
 
 
 ## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
 
 ```dart
 List<int> list = [1,2,3,4,5];
