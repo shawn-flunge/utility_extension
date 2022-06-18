@@ -13,13 +13,15 @@ void main() {
     test('String extension',(){
       String str = 'Utility Extension is good';
 
-      print(str.toCamelCase());
-      print(str.toConstantCase());
-      print(str.toSnakeCase());
-
       expect(str.toCamelCase(), 'utilityExtensionIsGood');
       expect(str.toConstantCase(), 'UTILITY_EXTENSION_IS_GOOD');
       expect(str.toSnakeCase(), 'utility_extension_is_good');
+    });
+
+    test('slice test',(){
+
+      List<int> slicedList = list.slice(start: -100);
+      print(slicedList);
     });
   });
 }

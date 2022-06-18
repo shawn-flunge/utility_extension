@@ -28,7 +28,8 @@ import 'package:utility_extension/utility_extension.dart
 ## Features
 ### List
 ```dart
-List<List<T>> devideInto(int each);
+List<List<T>> devideInto({int each});
+List<T> slice({int start, int end});
 Iterable<T> mapWithIndex(T Function(int index, T e) toElement);
 ```
 
@@ -50,6 +51,11 @@ to `/example` folder.
 ```dart
 List<int> list = [1,2,3,4,5];
 print(list.devideInto(2))   // output : [[1,2],[3,4],[5]]
+
+List<int> slicedList = list.slice(start: -3, end: -1);
+print(slicedList);  // output : [3,4]
+List<int> slicedList2 = list.slice(start: -100);
+print(slicedList2); // output: [1, 2, 3, 4, 5]
 
 String str = 'Utility Extension is good';
 
